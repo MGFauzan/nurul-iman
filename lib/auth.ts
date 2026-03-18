@@ -18,7 +18,7 @@ export async function signToken(payload: JWTUser): Promise<string> {
 export async function verifyToken(token: string): Promise<JWTUser | null> {
   try {
     const { payload } = await jwtVerify(token, secret())
-    return payload as JWTUser
+    return payload as unknown as JWTUser
   } catch { return null }
 }
 
@@ -48,9 +48,9 @@ export async function clearToken() {
 }
 
 export function checkPassword(input: string): boolean {
-  return input === (process.env.ADMIN_PASSWORD ?? 'admin123')
+  return input === (process.env.ADMIN_PASSWORD ?? 'NuR|Super@admin')
 }
 
 export function checkUsername(input: string): boolean {
-  return input === (process.env.ADMIN_USERNAME ?? 'admin')
+  return input === (process.env.ADMIN_USERNAME ?? 'SuperNuriAdmin')
 }
