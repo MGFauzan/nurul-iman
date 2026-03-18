@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
-export const runtime = 'edge'
 
 export const metadata: Metadata = {
   title: { default: 'Pondok Pesantren Nurul Iman — Cisalak, Subang', template: '%s | Pesantren Nurul Iman' },
