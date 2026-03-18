@@ -1,0 +1,8 @@
+{
+  "/api/pendaftaran/route": "app/api/pendaftaran/route.js",
+  "/pendaftaran/page": "app/pendaftaran/page.js",
+  "/page": "app/page.js",
+  "/profil/page": "app/profil/page.js",
+  "/admin/dashboard/page": "app/admin/dashboard/page.js",
+  "/admin/pendaftaran/page": "app/admin/pendaftaran/page.js"
+}

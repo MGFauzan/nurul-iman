@@ -1,0 +1,22 @@
+// app/api/auth/login/route.ts
+import { NextRequest, NextResponse } from 'next/server'
+import { signToken, setToken, checkUsername, checkPassword } from '@/lib/auth'
+
+export async function POST(req: NextRequest) {
+  try {
+    const body = await req.json() as { username?: string; password?: string }
+    const { username = '', password = '' } = body
+    if (!username || !password) {
+      return NextResponse.json({ success: false, message: 'Username dan password wajib diisi' }, { status: 400 })
+    }
+    if (!checkUsername(username) || !checkPassword(password)) {
+      return NextResponse.json({ success: false, message: 'Username atau password salah' }, { status: 401 })
+    }
+    const token = await signToken({ sub: '1', username, is_admin: true })
+    await setToken(token)
+    return NextResponse.json({ success: true })
+  } catch (e) {
+    console.error('Login error:', e)
+    return NextResponse.json({ success: false, message: 'Terjadi kesalahan server' }, { status: 500 })
+  }
+}
