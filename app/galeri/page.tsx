@@ -16,8 +16,9 @@ export default function GaleriPage() {
   useEffect(() => {
     fetch('/api/galeri')
       .then(r => r.json())
-      .then((d: { success: boolean; items: Galeri[] }) => {
-        if (d.success) setItems(d.items)
+      .then((d) => {
+        const data = d as { success: boolean; items: Galeri[] }
+        if (data.success) setItems(data.items)
       })
       .catch(console.error)
       .finally(() => setLoading(false))
