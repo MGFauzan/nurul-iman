@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
+export const runtime = 'edge'
+
 export const metadata: Metadata = {
   title: { default: 'Pondok Pesantren Nurul Iman — Cisalak, Subang', template: '%s | Pesantren Nurul Iman' },
   description: 'Pondok Pesantren Nurul Iman berdiri sejak 1973 di Cisalak, Kabupaten Subang, Jawa Barat. Mendidik santri dengan kurikulum Ahlussunnah Wal Jamaah, Tahfidz, Nahwu Shorof Metode Tabulas.',
