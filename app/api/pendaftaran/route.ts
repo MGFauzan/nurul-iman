@@ -1,4 +1,6 @@
 // app/api/pendaftaran/route.ts
+export const runtime = 'edge'
+
 import { NextRequest, NextResponse } from 'next/server'
 import { getUser } from '@/lib/auth'
 import { dbGetPendaftaran, dbCreatePendaftaran, dbUpdateStatusPendaftaran } from '@/lib/db'

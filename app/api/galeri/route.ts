@@ -1,4 +1,6 @@
 // app/api/galeri/route.ts
+export const runtime = 'edge'
+
 import { NextRequest, NextResponse } from 'next/server'
 import { getUser } from '@/lib/auth'
 import { dbGetGaleri, dbCreateGaleri, dbUpdateGaleri, dbDeleteGaleri } from '@/lib/db'
