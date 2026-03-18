@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "pages:build": "npx @opennextjs/cloudflare build && cp .open-next/worker.js .open-next/assets/_worker.js",
+    "pages:build": "npx @opennextjs/cloudflare build && mv .open-next/worker.js .open-next/_worker.js && cp -r .open-next/assets/* .open-next/",
     "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
