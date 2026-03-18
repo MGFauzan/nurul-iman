@@ -8,7 +8,7 @@ const secret = () => new TextEncoder().encode(
 export interface JWTUser { sub: string; username: string; is_admin: boolean }
 
 export async function signToken(payload: JWTUser): Promise<string> {
-  return new SignJWT(payload as Record<string, unknown>)
+  return new SignJWT(payload as unknown as Record<string, unknown>)
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
     .setExpirationTime('24h')
