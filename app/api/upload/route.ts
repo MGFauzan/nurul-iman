@@ -1,5 +1,4 @@
 // app/api/upload/route.ts
-export const runtime = 'edge'
 
 import { NextRequest, NextResponse } from 'next/server'
 import { getUser } from '@/lib/auth'

@@ -1,5 +1,4 @@
 // app/api/auth/logout/route.ts
-export const runtime = 'edge'
 
 import { NextResponse } from 'next/server'
 import { clearToken } from '@/lib/auth'
