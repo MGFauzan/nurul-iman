@@ -6,7 +6,7 @@ pages_build_output_dir = ".vercel/output/static"
 [[d1_databases]]
 binding = "DB"
 database_name = "pesantren-db"
-database_id = "YOUR_D1_DATABASE_ID"
+database_id = "c85a2eba-9a30-41bb-a8ca-6d1f052f034b"
 
 [[r2_buckets]]
 binding = "BUCKET"
