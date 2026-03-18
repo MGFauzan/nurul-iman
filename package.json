@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "pages:build": "npx @cloudflare/next-on-pages",
+    "pages:build": "npx @opennextjs/cloudflare build",
     "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
@@ -17,7 +17,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "1.13.5",
+    "@opennextjs/cloudflare": "latest",
     "@cloudflare/workers-types": "^4.20241127.0",
     "@types/node": "^20",
     "@types/react": "^18",
