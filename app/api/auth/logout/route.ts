@@ -1,9 +1,17 @@
 // app/api/auth/logout/route.ts
 
 import { NextResponse } from 'next/server'
-import { clearToken } from '@/lib/auth'
+
+export const runtime = 'edge'
 
 export async function POST() {
-  await clearToken()
-  return NextResponse.json({ success: true })
+  const response = NextResponse.json({ success: true })
+  response.cookies.set('admin_token', '', {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'lax',
+    maxAge: 0,
+    path: '/',
+  })
+  return response
 }
