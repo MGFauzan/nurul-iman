@@ -3,8 +3,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { signToken, checkUsername, checkPassword } from '@/lib/auth'
 
-export const runtime = 'edge'
-
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json() as { username?: string; password?: string }
