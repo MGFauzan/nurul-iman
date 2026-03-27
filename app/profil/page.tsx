@@ -192,8 +192,8 @@ export default function ProfilPage() {
             <div style={{background:'#f8fafc',borderRadius:18,padding:30,border:'1px solid #f1f5f9'}}>
               <div style={{width:50,height:50,background:'#e8f5e9',borderRadius:13,display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 12px'}}><BookOpen size={23} color="#0d5c38"/></div>
               <h3 style={{fontWeight:700,fontSize:17,color:'#1a202c',marginBottom:7}}>Pondok Pesantren Nurul Iman</h3>
-              <p style={{color:'#6b7280',lineHeight:1.7,marginBottom:18,fontSize:14}}>Jl. Sukamenak, Desa Cisalak, Kecamatan Cisalak,<br/>Kabupaten Subang, Jawa Barat 41283</p>
-              <a href="https://maps.google.com/?q=Desa+Cisalak+Kecamatan+Cisalak+Kabupaten+Subang" target="_blank" rel="noopener noreferrer"
+              <p style={{color:'#6b7280',lineHeight:1.7,marginBottom:18,fontSize:14}}>Jl. Sukamenak No.2, RT.02/RW.1, Sukakerti, Kec. Cisalak,<br/>Kabupaten Subang, Jawa Barat 41283</p>
+              <a href="https://maps.app.goo.gl/fpmgw7iJQkNskckQA" target="_blank" rel="noopener noreferrer"
                 style={{display:'inline-flex',alignItems:'center',gap:8,padding:'10px 20px',borderRadius:11,background:'#0d5c38',color:'#fff',fontWeight:600,fontSize:13,textDecoration:'none'}}>
                 <MapPin size={15}/>Buka di Google Maps
               </a>
